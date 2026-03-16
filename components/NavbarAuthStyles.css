@@ -1,0 +1,66 @@
+.authDesktop {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    height: 100%;
+}
+
+.userMenu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 12px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 99px;
+}
+
+.avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--surface-3);
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.userName {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.userRole {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.2;
+}
+
+.logoutBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 4px;
+    margin-left: 4px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.logoutBtn:hover {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.mobileAuth {
+    margin-top: 8px;
+    background: var(--surface-2);
+    border-radius: 8px;
+    overflow: hidden;
+}

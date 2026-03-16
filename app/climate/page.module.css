@@ -1,0 +1,369 @@
+.wrap {
+    padding: 32px 0 64px;
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+.sub {
+    color: var(--text-secondary);
+    font-size: 15px;
+    max-width: 520px;
+}
+
+.tempDisplay {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.tempVal {
+    font-size: 56px;
+    font-weight: 900;
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1;
+}
+
+.tempLabel {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-top: 6px;
+}
+
+/* Scenario bar */
+.scenarioBar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.scenarioBarLabel {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+}
+
+.scenarioBtn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 14px;
+    border-radius: 99px;
+    border: 1.5px solid var(--border);
+    background: var(--surface-3);
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.scenarioBtn:hover {
+    color: var(--text-primary);
+    background: var(--surface-4);
+}
+
+.scenarioBtn.active {
+    background: rgba(var(--sc-r, 34), var(--sc-g, 197), var(--sc-b, 94), 0.15);
+    border-color: var(--sc, #22c55e);
+    color: var(--sc, #22c55e);
+}
+
+/* Compare bar */
+.compareBar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 10px 14px;
+    background: var(--surface-3);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+}
+
+.compareBtn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 12px;
+    border-radius: 99px;
+    border: 1.5px solid var(--border);
+    background: var(--surface-2);
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.compareBtn:hover {
+    color: var(--text-primary);
+}
+
+.compareBtn.activeCompare {
+    border-color: var(--cc, #22c55e);
+    color: var(--cc, #22c55e);
+    background: rgba(34, 197, 94, 0.1);
+}
+
+/* Layout */
+.layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+/* Sidebar */
+.sidebar {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    position: sticky;
+    top: calc(var(--navbar-h) + 16px);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.panelTitle {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+}
+
+.sliderBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sliderHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sliderIcon {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sliderLabel {
+    font-size: 13px;
+    font-weight: 500;
+    flex: 1;
+}
+
+.sliderVal {
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif;
+    min-width: 36px;
+    text-align: right;
+}
+
+/* Main */
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Globe + metrics row */
+.glbMetrics {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.globeWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+}
+
+.globeWrap canvas {
+    border-radius: 50%;
+}
+
+.globeLabel {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.metricCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.metricCard {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px;
+    transition: transform 0.2s;
+}
+
+.metricCard:hover {
+    transform: translateY(-2px);
+}
+
+.metricTop {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.metricIcon {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.metricLabel {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.metricVal {
+    font-size: 22px;
+    font-weight: 800;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.metricDelta {
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+/* Chart */
+.chartWrap {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+}
+
+/* Scenario comparison cards */
+.scenarioCompare {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.cmpCard {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+}
+
+.cmpLabel {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.cmpRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.cmpScenLabel {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 2px;
+}
+
+.cmpVal {
+    font-size: 22px;
+    font-weight: 800;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.cmpDiff {
+    font-size: 12px;
+    font-weight: 700;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+}
+
+@media (max-width: 1024px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .glbMetrics {
+        grid-template-columns: 1fr;
+    }
+
+    .globeWrap {
+        flex-direction: row;
+    }
+
+    .scenarioCompare {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .metricCards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+}

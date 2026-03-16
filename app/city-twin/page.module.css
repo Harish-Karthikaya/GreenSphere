@@ -1,0 +1,233 @@
+.wrap {
+    padding: 32px 0 64px;
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+.sub {
+    color: var(--text-secondary);
+    font-size: 15px;
+    max-width: 480px;
+}
+
+.scoreWrap {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.scoreBig {
+    font-size: 56px;
+    font-weight: 900;
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1;
+}
+
+.scoreLabel {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin: 6px 0 8px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+/* Sidebar */
+.sidebar {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    position: sticky;
+    top: calc(var(--navbar-h) + 16px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.panelTitle {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.sliderBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sliderHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sliderIcon {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sliderLabel {
+    font-size: 13px;
+    font-weight: 500;
+    flex: 1;
+}
+
+.sliderVal {
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif;
+    min-width: 36px;
+    text-align: right;
+}
+
+/* Main */
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.canvasWrap {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.canvasBadge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 4px 12px;
+    border-radius: 99px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.metricsGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.metricCard {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.metricCard:hover {
+    transform: translateY(-2px);
+}
+
+.metricCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 3px 3px 0 0;
+}
+
+.metricIcon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+}
+
+.metricLabel {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+}
+
+.metricValue {
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.metricSub {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+
+.chartWrap {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+}
+
+@media (max-width: 1024px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .metricsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .metricsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header {
+        flex-direction: column;
+    }
+}

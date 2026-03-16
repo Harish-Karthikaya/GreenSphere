@@ -1,0 +1,407 @@
+.wrap {
+    padding: 32px 0 64px;
+}
+
+.header {
+    margin-bottom: 24px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+.sub {
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+
+/* Toolbar */
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.searchWrap {
+    position: relative;
+    flex: 1;
+    min-width: 240px;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.searchInput {
+    width: 100%;
+    padding: 12px 40px 12px 42px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+    border-color: var(--green-500);
+}
+
+.clearBtn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+/* Compare tray */
+.compareTray {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.trayItem {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 10px;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.25);
+    border-radius: 99px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.trayItem button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    display: flex;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.productCard {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px;
+    cursor: pointer;
+    transition: all 0.25s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.productCard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(34, 197, 94, 0.3);
+}
+
+.productCard.inCompare {
+    border-color: var(--green-500);
+    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.25);
+}
+
+.cardTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.productIcon {
+    font-size: 36px;
+}
+
+.productCategory {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 99px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.productName {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.productDesc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+}
+
+.statRow {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.statPill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px;
+    border-radius: 99px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.ratingRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ratingLabel {
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.ratingNum {
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.keyFact {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.cardActions {
+    margin-top: auto;
+}
+
+.addCompare {
+    width: 100%;
+    padding: 7px;
+    border-radius: 8px;
+    border: 1.5px solid var(--border);
+    background: none;
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all 0.2s;
+}
+
+.addCompare:hover,
+.addCompare.added {
+    border-color: var(--green-500);
+    color: var(--green-500);
+    background: rgba(34, 197, 94, 0.08);
+}
+
+/* Expanded detail */
+.expandedDetail {
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+    margin-top: 4px;
+}
+
+.expandedGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.expandedMetric {
+    background: var(--surface-3);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.expIcon {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expLabel {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.expVal {
+    font-size: 16px;
+    font-weight: 800;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.expSubLabel {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.rawMats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.rawMat {
+    padding: 2px 8px;
+    background: var(--surface-4);
+    border-radius: 99px;
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+/* No results */
+.noResults {
+    text-align: center;
+    padding: 80px 0;
+    color: var(--text-muted);
+}
+
+/* ── Comparison View ── */
+.compareView {}
+
+.compareTitle {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.compareHeader {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.compareHero {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+}
+
+.compareHeroName {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.compareHeroCat {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.compareCharts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.compareCharts> :first-child {
+    grid-column: 1 / -1;
+}
+
+.chartCard {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+}
+
+.chartCardTitle {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* Table */
+.compareTable {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.table th,
+.table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.table th {
+    color: var(--text-muted);
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    background: var(--surface-3);
+}
+
+.table tr:hover td {
+    background: var(--surface-2);
+}
+
+@media (max-width: 768px) {
+    .compareHeader {
+        grid-template-columns: 1fr;
+    }
+
+    .compareCharts {
+        grid-template-columns: 1fr;
+    }
+
+    .compareCharts> :first-child {
+        grid-column: auto;
+    }
+}
